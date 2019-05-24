@@ -8,8 +8,8 @@ class QueryClass {
     /**
      * Send query request to 311 API
      *
-     * @param $geo
-     * @return string
+     * @param $argv
+     * @return bool
      */
     public function queryApi($argv)
     {
@@ -31,6 +31,12 @@ class QueryClass {
         return false;
     }
 
+    /**
+     * Process user input
+     *
+     * @param $argv
+     * @return array
+     */
     private function processInput($argv)
     {
         $args = [];
@@ -58,7 +64,8 @@ class QueryClass {
      * Handle API response data
      *
      * @param $response
-     * @return string
+     * @param $args
+     * @return bool
      */
     private function handleResponse($response, $args)
     {
@@ -103,7 +110,7 @@ class QueryClass {
      * Generate CSV file from API response
      *
      * @param $data
-     * @return string
+     * @return bool
      */
     private function generateCsv($data)
     {

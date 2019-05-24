@@ -9,6 +9,7 @@ Once the files are in place, running composer install should have you up and run
 
 ## Usage:
 php 311.php {latitude} {longitude} {field1,field2,field3}
+
 The 'latitude' and 'longitude' parameters are required. The third field list parameter is optional. It expects 
 a comma-separated list of custom field names you wish to query.  By default, the response will record
 the 'service_request_id', 'description', and 'service_name' fields.  Returned data will be stored in a file
